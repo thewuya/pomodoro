@@ -7,7 +7,7 @@ function pomodoro()
 
 function short()
 {
-    set_time(0, 2);
+    set_time(5, 0);
 }
 
 function long()
@@ -72,3 +72,4 @@ function display_notification() {
         console.log("Notification permission not granted.");
     }
 }
+

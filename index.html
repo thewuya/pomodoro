@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    </head>
-    
-    <body onload="permission()">
-        <button onclick="pomodoro()">POMODORO</button>
-        <button onclick="short()">SHORT</button>
-        <button onclick="long()">LONG</button>
+</head>
+<body onload="permission()">
+    <div class="wrapper">
+        <div class="container">
+            <button class="button_container"onclick="pomodoro()">POMODORO</button>
+            <button class="button_container"onclick="short()">SHORT</button>
+            <button class="button_container"onclick="long()">LONG</button>
 
-        <div id="time">25: 00</div>
-        <button onclick="start()">开始</button>
-        <button onclick="pause()">停止</button>
-        
-    </body>
+            <div id="time">25: 00</div>
+            <button class="b_design"onclick="start()">开始</button>
+            <button class="b_design"onclick="pause()">停止</button>
+        </div>
+    </div>
     <script src="function.js"></script>
+</body>
 </html>
