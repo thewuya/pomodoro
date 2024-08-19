@@ -1,5 +1,8 @@
 var timer = null;
 var clock = document.getElementById("time");
+var counter = 0;
+var condition = new Boolean(false);
+
 function pomodoro()
 {
     set_time(25, 0);
@@ -29,10 +32,14 @@ function start(min, sec)
     sec = parseInt(time[1]);
     
     timer = setInterval( () => {
+        
         if (min <= 0 && sec <= 0)
         {
             clearInterval(timer);
             display_notification();
+            counter += 1;
+            document.getElementById("counter").innerHTML = counter;
+            short();
             return;
         }
 
@@ -72,4 +79,6 @@ function display_notification() {
         console.log("Notification permission not granted.");
     }
 }
+
+
 
